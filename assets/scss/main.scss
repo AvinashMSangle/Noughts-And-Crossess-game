@@ -1,4 +1,77 @@
+@use "variables" as v;
+
+ //Resets
 *{
     margin: 0%;
-    padding: ;
+    padding:0%;
+    box-sizing: border-box;
+}
+
+//Mixins
+%Center{
+    display: grid;
+    place-items: center;
+
+}
+
+//typography
+body{
+    font-family: "DM Sans",sans-serif;
+}
+
+button,input{
+    font-family: inherit;
+}
+
+//Main
+main{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: grid;
+    place-items: center;
+   
+    background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+    @extend %center;
+}
+
+.heading{
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.heading::before{
+    content:"X";
+    position: absolute;
+    left: -2rem;
+    color: red;
+    position: relative;
+}
+.heading::after{
+    content:"O";
+    position: absolute;
+    right: -2rem;
+    color: red;
+}
+
+// Game Grid
+.game-grid{
+    width: 100%;
+    max-width: 20rem;
+    aspect-ratio: 1/1;
+
+    display: grid;
+    border-radius: 1rem;
+    grid-template-columns: repeat(3,1fr);
+}
+.box{
+    width:100%;
+    aspect-ratio: 1/1;
+    font-size: 2rem;
+
+    @extend%Center;
+}
+
+.reset-btn{
+    padding: 0.5rem 0.3rem;
 }
