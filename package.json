@@ -1,0 +1,16 @@
+{
+  "name": "noughts-and-crossess-game",
+  "version": "1.0.0",
+  "description": "Classic tictactoe Game",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "AVI",
+  "license": "ISC",
+  "main": "main.js",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
